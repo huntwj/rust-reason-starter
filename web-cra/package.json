@@ -27,5 +27,6 @@
     "bs-fetch": "^0.3.1",
     "bs-platform": "^4.0.18",
     "reason-react": "^0.5.3"
-  }
+  },
+  "proxy": "http://localhost:4000"
 }

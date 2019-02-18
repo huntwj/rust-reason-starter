@@ -1,0 +1,6 @@
+[global]
+address = "0.0.0.0"
+port = 4000
+
+[global.databases]
+vista = { url = "mysql://username:password@db-server/mysql-db-name" }
