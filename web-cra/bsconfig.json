@@ -1,14 +1,21 @@
 {
-  "name": "reason-scripts",
-  "sources": ["src"],
-  "bs-dependencies": ["reason-react", "@glennsl/bs-jest", "bs-fetch"],
-  "reason": {
-    "react-jsx": 2
-  },
-  "refmt": 3,
-  "package-specs": {
-    "module": "commonjs",
-    "in-source": true
-  },
-  "suffix": ".bs.js"
+    "name": "reason-scripts",
+    "sources": [
+        "src"
+    ],
+    "bs-dependencies": [
+        "reason-react",
+        "@glennsl/bs-jest",
+        "bs-fetch",
+        "@glennsl/bs-json"
+    ],
+    "reason": {
+        "react-jsx": 2
+    },
+    "refmt": 3,
+    "package-specs": {
+        "module": "commonjs",
+        "in-source": true
+    },
+    "suffix": ".bs.js"
 }
