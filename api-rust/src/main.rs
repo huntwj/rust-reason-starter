@@ -3,11 +3,31 @@
 #[macro_use]
 extern crate rocket;
 
-#[get("/")]
-fn index() -> &'static str {
-    "Hello, world!"
+#[macro_use]
+extern crate serde_derive;
+
+use rocket_contrib::json::Json;
+
+#[derive(Serialize)]
+struct Message {
+    id: u64,
+    text: String,
+}
+
+#[get("/messages")]
+fn index() -> Json<Vec<Message>> {
+    Json(vec![
+        Message {
+            id: 1,
+            text: "This is a message from the server.".to_string(),
+        },
+        Message {
+            id: 2,
+            text: "This is another message from the server.".to_string(),
+        },
+    ])
 }
 
 fn main() {
-    rocket::ignite().mount("/", routes![index]).launch();
+    rocket::ignite().mount("/api/v1", routes![index]).launch();
 }
